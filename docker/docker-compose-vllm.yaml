@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   vllm_service:
-    image: vllm/vllm-openai:latest
+    image: vllm/vllm-openai:v0.10.0
     container_name: vllm
     deploy:
       resources:
@@ -17,7 +17,7 @@ services:
     #network_mode: host
     # Or you can only publish port 30000
     ports:
-      - "8001:8000"
+      - "8000:8000"
     environment:
       HF_TOKEN: <secret>
     command:
